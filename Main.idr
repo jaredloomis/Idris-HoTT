@@ -183,12 +183,12 @@ apIdf : {A : Type} -> {u, v : A} ->
         (p : u .= v) -> ap (idf A) p .= p
 apIdf Hrefl = Hrefl
 
-infix 4 ~
-(~) : {A : Type} ->
-      {B : Type} ->
-      (f, g : A -> B) ->
-      Type
-(~) {A} f g = (x : A) -> f x .= g x
+-- infix 4 ~
+-- (~) : {A : Type} ->
+--      {B : Type} ->
+--      (f, g : A -> B) ->
+--      Type
+-- (~) {A} f g = (x : A) -> f x .= g x
 
 data QInv : {A, B : Type} -> (f : A -> B) -> Type where
     MkQInv : {A, B : Type} ->
